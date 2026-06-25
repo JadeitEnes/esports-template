@@ -37,6 +37,7 @@
         <li><a href="#hero">Ana Sayfa</a></li>
         <li><a href="#about">Hakkımızda</a></li>
         <li><a href="#roster">Kadro</a></li>
+        <li><a href="#gallery">Galeri</a></li>
         <li><a href="#contact">İletişim</a></li>
       </ul>
 
@@ -52,8 +53,9 @@
     <div id="mobile-menu" role="menu" aria-label="Mobil menü">
       <a href="#hero"    role="menuitem">Ana Sayfa</a>
       <a href="#about"   role="menuitem">Hakkımızda</a>
-      <a href="#roster"  role="menuitem">Kadro</a>
-      <a href="#contact" role="menuitem">İletişim</a>
+      <a href="#roster"   role="menuitem">Kadro</a>
+      <a href="#gallery"  role="menuitem">Galeri</a>
+      <a href="#contact"  role="menuitem">İletişim</a>
       <a href="#contact" class="btn btn-red" role="menuitem">Bize Katıl</a>
     </div>
   </nav>
@@ -228,6 +230,45 @@
 </section>
 
 
+<section id="gallery" aria-label="Galeri bölümü">
+  <div class="roster-glow" aria-hidden="true"></div>
+
+  <div class="roster-header reveal">
+    <div class="section-label center">EA FC 26 · Pro Clubs · Sezon 2025</div>
+    <h2 class="roster-title"><span class="gold-text">GALERİ</span></h2>
+    <p class="roster-subtitle">Maçlardan Kareler</p>
+  </div>
+
+  <div class="reel-wrap reveal">
+    <div class="reel-clip">
+      <div class="reel-scene" id="reel-scene"></div>
+      <div class="reel-floor-light" aria-hidden="true"></div>
+      <div class="reel-sparkles"    aria-hidden="true">
+        <span class="sp sp-1"></span><span class="sp sp-2"></span>
+        <span class="sp sp-3"></span><span class="sp sp-4"></span>
+        <span class="sp sp-5"></span><span class="sp sp-6"></span>
+      </div>
+    </div>
+    <div class="reel-hint" aria-hidden="true">&#8592; tıkla veya kaydır &#8594;</div>
+  </div>
+
+  <div class="gallery-thumbs-wrap">
+    <div class="gallery-thumbs" id="gallery-thumbs"></div>
+  </div>
+</section>
+
+<div class="gallery-lightbox" id="gallery-lightbox" role="dialog" aria-modal="true" aria-label="Görsel önizleme">
+  <div class="gallery-lightbox-backdrop"></div>
+  <button class="gallery-lightbox-close" aria-label="Kapat">&#10005;</button>
+  <button class="gallery-lightbox-prev"  aria-label="Önceki">&#8249;</button>
+  <button class="gallery-lightbox-next"  aria-label="Sonraki">&#8250;</button>
+  <div class="gallery-lightbox-frame">
+    <img src="" alt="" id="lb-img" />
+  </div>
+  <div class="gallery-lightbox-caption" id="lb-caption"></div>
+</div>
+
+
 <section id="contact" aria-label="İletişim bölümü">
   <div class="hero-grid-bg" aria-hidden="true"></div>
 
@@ -323,6 +364,7 @@
       <li><a href="#hero">Ana Sayfa</a></li>
       <li><a href="#about">Hakkımızda</a></li>
       <li><a href="#roster">Kadro</a></li>
+      <li><a href="#gallery">Galeri</a></li>
       <li><a href="#contact">İletişim</a></li>
     </ul>
 
