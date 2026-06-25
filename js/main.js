@@ -29,18 +29,6 @@ const TR_FLAG_SVG = `
     transform="rotate(18 20 10) translate(-1.5 0)"/>
 </svg>`.trim();
 
-const PERSON_SVG = `
-<svg viewBox="0 0 110 235" xmlns="http://www.w3.org/2000/svg"
-     width="88" height="188" style="margin-bottom:-2px;"
-     fill="rgba(10,3,3,0.84)">
-  <ellipse cx="55" cy="37" rx="22" ry="26"/>
-  <rect x="48" y="60" width="14" height="14" rx="4"/>
-  <path d="M18 85 Q18 73 55 73 Q92 73 92 85 L96 180 L14 180 Z"/>
-  <path d="M92 91 Q108 112 101 140 Q94 151 81 147 Q75 137 80 124 Q90 113 92 96 Z"/>
-  <path d="M18 91 Q2  112 9  140 Q16 151 29 147 Q35 137 30 124 Q20 113 18 96 Z"/>
-  <path d="M24 130 Q55 144 86 130 Q88 126 86 122 Q55 135 24 122 Q22 126 24 130 Z"/>
-  <path d="M22 180 L16 233 L46 233 L55 200 L64 233 L94 233 L88 180 Z"/>
-</svg>`.trim();
 
 function buildPlayerCard(player, index) {
   const delay = (index % 5) * 80;
@@ -54,8 +42,7 @@ function buildPlayerCard(player, index) {
     <div class="player-sil" aria-hidden="true">
       <div class="card-glow"></div>
       <div class="card-flag">${TR_FLAG_SVG}</div>
-      <span class="card-mystery">?</span>
-      ${PERSON_SVG}
+      <img class="card-no-image" src="assets/images/no_image.png" alt="Oyuncu görseli yok" draggable="false" />
       <span class="card-hover-num" aria-hidden="true">#0</span>
     </div>
     <div class="player-info">
