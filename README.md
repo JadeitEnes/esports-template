@@ -1,101 +1,46 @@
-# Esports Team Website Template
+# SENSE FC — EA FC26 Pro Clubs
 
-A single-page esports team website built for **EA FC26 Pro Clubs**. Dark red/black theme with gold accents, fully responsive. No framework dependencies beyond Tailwind CDN.
-
-**Live preview:** [BayerLeverkuzen FC26](https://github.com/JadeitEnes/esports-template)
+Tek sayfalık kulüp sitesi. Koyu lacivert zemin, tek buz-mavisi vurgu, editoryal tipografi.
+Framework yok, build adımı yok.
 
 ---
 
-## Features
+## Bölümler
 
-- Hero section with team emblem and animated title
-- Stats bar (player count, founded year, platform, country)
-- About section with mini stat boxes
-- Player roster grid with hover jersey number effect
-- Lion guard decorative layout flanking the roster
-- Contact section with social media buttons
-- Fully responsive down to mobile
-- Scroll reveal animations
-- Fixed navbar with scroll blur effect
+- **Hero** — büyük "SENSE FC" yazı bloğu (düz metin, `<h1>`), kısa tanıtım, meta şeridi
+- **Kinetik şerit** — yavaş kayan kelime marküsü (`prefers-reduced-motion` ile durur)
+- **Kulüp** — iki kolon anlatım + logo, altında 4'lü künye ızgarası
+- **Kadro** — mevkiye göre filtreli (Tümü / Kaleci / Defans / Orta Saha / Forvet) oyuncu ızgarası
+- **Galeri** — editoryal ızgara, tıklayınca lightbox (ok tuşları + Esc)
+- **İletişim** — çağrı bloğu, sosyal bağlantılar, e-posta butonu
+- **Footer** — marka, alt menü, sosyal, telif
 
-## Tech Stack
+## Teknoloji
 
-- Vanilla HTML / CSS / JavaScript
-- [Tailwind CSS](https://tailwindcss.com/) via CDN (utility layer only)
-- [Google Fonts](https://fonts.google.com/) — Bebas Neue + Rajdhani
-- No build step required
+- Saf HTML / CSS / JavaScript
+- [Google Fonts](https://fonts.google.com/) — Space Grotesk (başlık) + Inter (gövde)
+- Görseller: `assets/images/` — `logo.png`, `no_image.png`, `eMajorLeague.png`, `gallery/g1..g7.jpg`
 
-## Project Structure
+## Kurulum
 
-```
-/
-├── index.html
-├── css/
-│   └── style.css
-├── js/
-│   └── main.js
-└── assets/
-    └── images/
-        ├── emblem.png
-        ├── lion_left.png
-        └── lion_right.png
-```
+1. Kulüp logosunu **`assets/images/logo.png`** olarak kaydet (kare, tercihen saydam PNG).
+2. `index.html`'i tarayıcıda aç.
+3. Oyuncu verisi: `js/main.js` → `PLAYERS` dizisi (`num` + `pos`: KAL/DEF/OSA/FOR).
+4. Sosyal linkler ve `mailto:` adresi: `index.html` içinde `#join` bölümü.
 
-## Getting Started
+## Renk & tipografi
 
-1. Clone or download the repo
-2. Replace the images in `assets/images/` with your team's emblem and lion (or any mascot) images
-3. Edit player data in `js/main.js` under the `PLAYERS` array
-4. Update team name, colors and social links to match your team
-5. Open `index.html` in a browser — no build step needed
-
-## Customization
-
-### Team Colors
-
-Edit the CSS variables at the top of `css/style.css`:
+`css/style.css` başındaki `:root` değişkenleri:
 
 ```css
-:root {
-  --red:      #9B1C1C;  /* primary accent */
-  --gold:     #C9A84C;  /* decorative gold */
-  --bg:       #060202;  /* page background */
-}
+--ink:        #060B14;  /* sayfa zemini */
+--surface-2:  #111E2E;  /* kart zemini */
+--line:       #1C2C3E;  /* kılcal çizgiler */
+--ice:        #8FB9E0;  /* tek vurgu rengi */
+--frost:      #DCEAF7;  /* başlık / açık metin */
+--text-mid:   #9FB2C4;  /* ikincil metin */
 ```
 
-### Player Roster
+## Lisans
 
-Edit the `PLAYERS` array in `js/main.js`:
-
-```js
-const PLAYERS = [
-  { num: 1,  pos: 'KAL' },
-  { num: 9,  pos: 'FOR' },
-  // ...
-];
-```
-
-Positions: `KAL` (goalkeeper), `DEF` (defender), `OSA` (midfielder), `FOR` (forward).
-
-When player photos and real jersey numbers are ready, update `buildPlayerCard()` in `main.js`.
-
-### Social Links
-
-Find the `.social-links` section in `index.html` and replace the `href="#"` values with your actual Discord, Twitter/X and Instagram URLs.
-
-## Lion Images
-
-The template uses landscape-oriented mascot images (recommended ratio ~3:2). The lions are positioned as flex columns flanking the roster grid and hide automatically on screens below 900px.
-
-If you use a different mascot image, update the width in `css/style.css`:
-
-```css
-.lion-guard-img {
-  width: 340px; /* adjust to your image */
-  height: auto;
-}
-```
-
-## License
-
-MIT — free to use, modify and distribute.
+MIT.
