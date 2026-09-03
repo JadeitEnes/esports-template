@@ -1,44 +1,47 @@
-# SENSE FC — EA FC26 Pro Clubs
+# SENSE FC
 
-Tek sayfalık kulüp sitesi. Koyu lacivert zemin, tek buz-mavisi vurgu, editoryal tipografi.
-Framework yok, build adımı yok.
+Tek sayfalık e-spor kulübü sitesi. EA FC26 Pro Clubs.
+
+Soğuk palet (mavi-siyah / lacivert / gümüş-beyaz / buz mavisi), e-spor takımı
+yerleşimi: kadro önde, künye şeridi, sola dayalı bölüm başlıkları. Framework yok,
+build yok.
 
 ---
 
 ## Bölümler
 
-- **Hero** — büyük "SENSE FC" yazı bloğu (düz metin, `<h1>`), kısa tanıtım, meta şeridi
-- **Kinetik şerit** — yavaş kayan kelime marküsü (`prefers-reduced-motion` ile durur)
-- **Kulüp** — iki kolon anlatım + logo, altında 4'lü künye ızgarası
-- **Kadro** — mevkiye göre filtreli (Tümü / Kaleci / Defans / Orta Saha / Forvet) oyuncu ızgarası
-- **Galeri** — editoryal ızgara, tıklayınca lightbox (ok tuşları + Esc)
-- **İletişim** — çağrı bloğu, sosyal bağlantılar, e-posta butonu
-- **Footer** — marka, alt menü, sosyal, telif
+- **Hero** — logo, "SENSE FC", tek satır, iki CTA, mono künye satırı
+- **Künye şeridi** — Oyuncu / Kuruluş / Lig / Bölge (mono)
+- **01 · Kadro** — mevki sekmeleriyle filtre (Tümü / Kaleci / Defans / Orta Saha / Forvet), portre oyuncu kartları
+- **02 · Kulüp** — sol başlık + sağ metin, açık bant
+- **03 · Maçlar** — görsel ızgara, ilki tam en; tıkla → lightbox (← → · Esc)
+- **04 · İletişim** — e-posta butonu + sosyal bağlantılar
+- **Footer** — marka, menü, telif
 
 ## Teknoloji
 
 - Saf HTML / CSS / JavaScript
-- [Google Fonts](https://fonts.google.com/) — Space Grotesk (başlık) + Inter (gövde)
-- Görseller: `assets/images/` — `logo.png`, `no_image.png`, `eMajorLeague.png`, `gallery/g1..g7.jpg`
+- Google Fonts: **Bricolage Grotesque** (başlık) · **Inter** (metin) · **JetBrains Mono** (rakam/etiket)
+- Görseller: `assets/images/` → `logo.png`, `no_image.png`, `gallery/g1..g7.jpg`
 
 ## Kurulum
 
-1. Kulüp logosunu **`assets/images/logo.png`** olarak kaydet (kare, tercihen saydam PNG).
+1. Kulüp logosunu `assets/images/logo.png` olarak koy (kare, saydam PNG).
 2. `index.html`'i tarayıcıda aç.
-3. Oyuncu verisi: `js/main.js` → `PLAYERS` dizisi (`num` + `pos`: KAL/DEF/OSA/FOR).
-4. Sosyal linkler ve `mailto:` adresi: `index.html` içinde `#join` bölümü.
+3. Oyuncular: `js/main.js` → `PLAYERS` (`num` + `pos`: KAL / DEF / OSA / FOR).
+4. Künye, sosyal linkler ve `mailto:` → `index.html` içinde düzenlenir.
 
-## Renk & tipografi
-
-`css/style.css` başındaki `:root` değişkenleri:
+## Palet (`css/style.css` → `:root`)
 
 ```css
---ink:        #060B14;  /* sayfa zemini */
---surface-2:  #111E2E;  /* kart zemini */
---line:       #1C2C3E;  /* kılcal çizgiler */
---ice:        #8FB9E0;  /* tek vurgu rengi */
---frost:      #DCEAF7;  /* başlık / açık metin */
---text-mid:   #9FB2C4;  /* ikincil metin */
+--void:   #070B12;   /* zemin — mavi-siyah */
+--deep:   #0A1220;   /* açık bant */
+--panel:  #0F1930;   /* kart */
+--edge:   rgba(159,191,227,0.13);  /* kılcal çizgi */
+--chrome: #ECF2FA;   /* başlık — gümüş-beyaz */
+--mist:   #94A8C0;   /* gövde metni */
+--ice:    #8FBEEC;   /* aksan */
+--ice-hi: #CDE4FB;   /* buzul parlama */
 ```
 
 ## Lisans
