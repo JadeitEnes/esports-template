@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="SENSE FC — EA FC26 Pro Clubs kulübü. Sezgiyle oynayan, küllerinden doğan takım." />
-  <meta name="theme-color" content="#070B12" />
+  <meta name="description" content="SENSE FC — EA FC kulübü. Sezgiyle oynayan, küllerinden doğan takım." />
+  <meta name="theme-color" content="#EEF5FF" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self'; connect-src https://fonts.googleapis.com https://fonts.gstatic.com; object-src 'none'; base-uri 'none'; form-action 'none';" />
   <link rel="icon" type="image/png" href="assets/images/logo.png" />
   <link rel="apple-touch-icon" href="assets/images/logo.png" />
-  <title>SENSE FC — EA FC26 Pro Clubs</title>
+  <title>SENSE FC — EA FC Kulübü</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -24,27 +25,25 @@
   <div class="nav-in">
     <a class="brand" href="#top" aria-label="SENSE FC ana sayfa">
       <img src="assets/images/logo.png" alt="" />
-      <span>SENSE&nbsp;FC</span>
     </a>
     <nav class="nav-links" aria-label="Ana menü">
       <a href="#squad">Kadro</a>
       <a href="#about">Kulüp</a>
-      <a href="#gallery">Maçlar</a>
+      <a href="#gallery">Galeri</a>
       <a href="#join">İletişim</a>
     </nav>
-    <a class="btn btn-line nav-cta" href="#join">Bize Katıl</a>
     <button class="nav-toggle" id="navToggle" aria-label="Menüyü aç" aria-expanded="false" aria-controls="drawer">
       <span></span><span></span>
     </button>
   </div>
 </header>
 
-<div class="drawer" id="drawer" aria-hidden="true">
+<nav class="drawer" id="drawer" aria-label="Ana menü" aria-hidden="true">
   <a href="#squad">Kadro</a>
   <a href="#about">Kulüp</a>
-  <a href="#gallery">Maçlar</a>
+  <a href="#gallery">Galeri</a>
   <a href="#join">İletişim</a>
-</div>
+</nav>
 
 <main id="main">
 
@@ -52,28 +51,14 @@
     <div class="hero-glow" aria-hidden="true"></div>
     <div class="hero-in">
       <img class="hero-logo" src="assets/images/logo.png" alt="SENSE FC amblemi" />
+      <p class="hero-est">2026</p>
       <h1 class="hero-name">SENSE <span>FC</span></h1>
       <p class="hero-line">Sezgiyle oynayan, küllerinden doğan kulüp.</p>
-      <div class="hero-cta">
-        <a class="btn btn-solid" href="#squad">Kadroyu Gör</a>
-        <a class="btn btn-line" href="#join">Bize Katıl</a>
-      </div>
-      <p class="hero-meta">EST. 2026 &nbsp;·&nbsp; Türkiye &nbsp;·&nbsp; EA FC26 Pro Clubs</p>
-    </div>
-  </section>
-
-  <section class="statband" aria-label="Kulüp künyesi">
-    <div class="statband-in">
-      <div><span class="sb-v">15</span><span class="sb-l">Oyuncu</span></div>
-      <div><span class="sb-v">2026</span><span class="sb-l">Kuruluş</span></div>
-      <div><span class="sb-v">eMajor</span><span class="sb-l">Lig</span></div>
-      <div><span class="sb-v">TR</span><span class="sb-l">Bölge</span></div>
     </div>
   </section>
 
   <section class="sec" id="squad">
     <header class="shead reveal">
-      <p class="shead-tag"><span class="shead-ix">01</span> / 04</p>
       <h2 class="shead-title">Kadro</h2>
       <p class="shead-sub">Sezon 2026 kadrosu. Oyuncu bilgileri yakında güncellenecek.</p>
     </header>
@@ -92,19 +77,11 @@
   <section class="sec alt" id="about">
     <div class="about-grid">
       <header class="shead reveal">
-        <p class="shead-tag"><span class="shead-ix">02</span> / 04</p>
         <h2 class="shead-title">Kulüp</h2>
       </header>
       <div class="about-body reveal">
         <p class="lead">
-          SENSE FC, 2026'da kurulan bir EA FC26 Pro Clubs kulübüdür.
-        </p>
-        <p>
-          Sahada oyun kurmaya, doğru anda doğru pas ve doğru anda doğru presi
-          yapmaya çalışıyoruz.
-        </p>
-        <p>
-          Kulüp renkleri buz mavisi ve gümüş; menşei Türkiye.
+          SENSE FC, 2026'da kurulan bir EA FC kulübüdür.
         </p>
       </div>
     </div>
@@ -112,28 +89,22 @@
 
   <section class="sec" id="gallery">
     <header class="shead reveal">
-      <p class="shead-tag"><span class="shead-ix">03</span> / 04</p>
-      <h2 class="shead-title">Maçlar</h2>
+      <h2 class="shead-title">Galeri</h2>
     </header>
 
     <div class="shots reveal" id="shots"></div>
   </section>
 
-  <section class="sec alt" id="join">
+  <section class="sec alt contact" id="join">
     <div class="join-in reveal">
-      <header class="shead">
-        <p class="shead-tag"><span class="shead-ix">04</span> / 04</p>
-        <h2 class="shead-title">İletişim</h2>
-        <p class="shead-sub">Denemelere katılmak veya kulüple iletişim için bize yaz.</p>
-      </header>
-
+      <p class="contact-tag">İletişim</p>
       <div class="join-actions">
-        <a class="btn btn-solid" href="mailto:sensefc@example.com">E-posta gönder</a>
+        <a class="join-mail" href="mailto:sensefc@example.com">sensefc@example.com</a>
         <ul class="join-links">
           <li><a href="https://www.emajorleague.com/teams/team/406/" target="_blank" rel="noopener noreferrer">eMajor League</a></li>
-          <li><a href="#">Discord</a></li>
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">X</a></li>
+          <li><a href="#" target="_blank" rel="noopener noreferrer">Discord</a></li>
+          <li><a href="#" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li><a href="#" target="_blank" rel="noopener noreferrer">X</a></li>
         </ul>
       </div>
     </div>
@@ -150,10 +121,10 @@
     <nav class="foot-links" aria-label="Alt menü">
       <a href="#squad">Kadro</a>
       <a href="#about">Kulüp</a>
-      <a href="#gallery">Maçlar</a>
+      <a href="#gallery">Galeri</a>
       <a href="#join">İletişim</a>
     </nav>
-    <p class="foot-meta">© 2026 SENSE FC &nbsp;·&nbsp; EA FC26 Pro Clubs</p>
+    <p class="foot-meta">© 2026 SENSE FC &nbsp;·&nbsp; EA FC Kulübü</p>
   </div>
 </footer>
 
