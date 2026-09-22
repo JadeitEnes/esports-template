@@ -19,13 +19,9 @@ const PLAYERS = [
 ];
 
 const GALLERY = [
-  { src: 'assets/images/gallery/g1.jpg', alt: 'Maç karesi 1' },
-  { src: 'assets/images/gallery/g2.jpg', alt: 'Maç karesi 2' },
-  { src: 'assets/images/gallery/g3.jpg', alt: 'Maç karesi 3' },
-  { src: 'assets/images/gallery/g4.jpg', alt: 'Maç karesi 4' },
-  { src: 'assets/images/gallery/g5.jpg', alt: 'Maç karesi 5' },
-  { src: 'assets/images/gallery/g6.jpg', alt: 'Maç karesi 6' },
-  { src: 'assets/images/gallery/g7.jpg', alt: 'Maç karesi 7' },
+  { src: 'assets/images/gallery/forma-yaka.jpg', alt: 'SENSE FC forma yaka yaması' },
+  { src: 'assets/images/gallery/amblem-cerceveli.jpg', alt: 'SENSE FC çerçeveli amblem' },
+  { src: 'assets/images/gallery/forma-on.jpg', alt: 'SENSE FC forma ön detayı' },
 ];
 
 const PLACEHOLDER = 'assets/images/no_image.png';
