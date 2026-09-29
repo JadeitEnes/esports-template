@@ -20,9 +20,11 @@ const PLAYERS = [
 ];
 
 const GALLERY = [
+  { src: 'assets/images/gallery/soyunma-odasi.png', alt: 'SENSE FC soyunma odası' },
+  { src: 'assets/images/gallery/forma-koleksiyonu.png', alt: 'SENSE FC forma koleksiyonu — ev sahibi, deplasman, alternatif, kaleci' },
+  { src: 'assets/images/gallery/sezon-vitrini.png', alt: 'SENSE FC 26/27 sezonu forma vitrini' },
   { src: 'assets/images/gallery/forma-yaka.jpg', alt: 'SENSE FC forma yaka yaması' },
   { src: 'assets/images/gallery/amblem-cerceveli.jpg', alt: 'SENSE FC çerçeveli amblem' },
-  { src: 'assets/images/gallery/forma-on.jpg', alt: 'SENSE FC forma ön detayı' },
 ];
 
 const PLACEHOLDER = 'assets/images/no_image.png';
