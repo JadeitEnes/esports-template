@@ -1,10 +1,10 @@
 'use strict';
 
 const PLAYERS = [
-  { num: 1,  pos: 'KAL' },
-  { num: 16, pos: 'KAL' },
-  { num: 2,  pos: 'DEF' },
-  { num: 3,  pos: 'DEF' },
+  { num: 1,  pos: 'KAL', name: 'Turgutcan', captain: true },
+  { num: 16, pos: 'KAL', name: 'Emre', captain: true },
+  { num: 2,  pos: 'DEF', name: 'Murty', captain: true },
+  { num: 3,  pos: 'DEF', name: 'jadEiT', captain: true },
   { num: 4,  pos: 'DEF' },
   { num: 5,  pos: 'DEF' },
   { num: 6,  pos: 'DEF' },
@@ -37,15 +37,17 @@ function renderSquad() {
     const card = document.createElement('article');
     card.className = 'pcard';
     card.dataset.pos = player.pos;
+    const name = player.name || `Oyuncu ${player.num}`;
+    const handle = player.name ? player.name.toLowerCase().replace(/[^a-z0-9]/g, '') : String(player.num);
     card.innerHTML = `
       <div class="pcard-media">
         <img src="${PLACEHOLDER}" alt="" loading="lazy" />
         <span class="pcard-num">${String(player.num).padStart(2, '0')}</span>
-        <span class="pcard-pos">${player.pos}</span>
+        <span class="pcard-pos">${player.pos}${player.captain ? ' · C' : ''}</span>
       </div>
       <div class="pcard-foot">
-        <p class="pcard-name">Oyuncu ${player.num}</p>
-        <p class="pcard-tag">@sense.${player.num}</p>
+        <p class="pcard-name">${name}${player.captain ? ' <span class="pcard-captain">Kaptan</span>' : ''}</p>
+        <p class="pcard-tag">@sense.${handle}</p>
       </div>`;
     frag.appendChild(card);
   });

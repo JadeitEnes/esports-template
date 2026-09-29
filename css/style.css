@@ -396,6 +396,15 @@ ul { list-style: none; }
   font-weight: 700;
   color: var(--chrome);
 }
+.pcard-captain {
+  margin-left: 0.4rem;
+  font-family: var(--f-mono);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ice);
+}
 .pcard-tag {
   margin-top: 0.2rem;
   font-family: var(--f-mono);
