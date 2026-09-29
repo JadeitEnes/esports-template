@@ -1,20 +1,21 @@
 'use strict';
 
 const PLAYERS = [
-  { num: 1,  pos: 'KAL', name: 'Turgutcan', captain: true },
-  { num: 16, pos: 'KAL', name: 'Emre', captain: true },
-  { num: 2,  pos: 'DEF', name: 'Murty', captain: true },
-  { num: 3,  pos: 'DEF', name: 'jadEiT', captain: true },
+  { num: 1,  pos: 'KAL' },
+  { num: 16, pos: 'KAL' },
+  { num: 2,  pos: 'DEF' },
+  { num: 3,  pos: 'DEF' },
   { num: 4,  pos: 'DEF' },
   { num: 5,  pos: 'DEF' },
   { num: 6,  pos: 'DEF' },
   { num: 8,  pos: 'OSA' },
-  { num: 10, pos: 'OSA' },
+  { num: 10, pos: 'OSA', name: 'jadEiT', captain: true },
   { num: 14, pos: 'OSA' },
   { num: 18, pos: 'OSA' },
+  { num: 55, pos: 'OSA', name: 'Murty', captain: true },
   { num: 7,  pos: 'FOR' },
-  { num: 9,  pos: 'FOR' },
-  { num: 11, pos: 'FOR' },
+  { num: 9,  pos: 'FOR', name: 'Turgutcan', captain: true },
+  { num: 11, pos: 'FOR', name: 'Emre', captain: true },
   { num: 17, pos: 'FOR' },
 ];
 
